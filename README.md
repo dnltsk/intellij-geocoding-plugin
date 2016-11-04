@@ -1,8 +1,19 @@
-# IntelliJ Geocode Plugin
+# IntelliJ Geocoding Plugin
 
 ## Install
 
-## Run from scretch
+### via IntelliJ Plugin Repository
+
+1. go to _Preferences_ (⌘,)
+2. in _Plugins_ search for "Geocoding"
+3. select _Search in repoitories_
+4. there you should find the _Geocoding Plugin_
+
+### via JAR file
+
+(tbd)
+
+## Run from scratch
 
 1. clone
 2. `gradle runIdea`
