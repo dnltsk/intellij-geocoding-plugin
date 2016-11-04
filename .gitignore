@@ -1,4 +1,6 @@
 /.idea
+/*.iws
+/*.iml
 /build
-/intellij-geocode-plugin.iws
+/.gradle
 /out
