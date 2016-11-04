@@ -9,7 +9,7 @@ import com.intellij.openapi.project.Project;
 import org.teeschke.intellij.geocode.plugin.nominatim.LonLat;
 import org.teeschke.intellij.geocode.plugin.nominatim.NominatimGeocoder;
 
-public class TextToLonLat extends AnAction {
+public class TextToLonLat extends AbstractGeocodeAction {
 
     @Override
     public void actionPerformed(AnActionEvent actionEvent) {
@@ -18,6 +18,10 @@ public class TextToLonLat extends AnAction {
 
         final Document document = editor.getDocument();
         final SelectionModel selectionModel = editor.getSelectionModel();
+
+        if(!isTextSelected(selectionModel.getSelectedText())){
+            return;
+        }
 
         final String selectedText = selectionModel.getSelectedText();
         final int start = selectionModel.getSelectionStart();
