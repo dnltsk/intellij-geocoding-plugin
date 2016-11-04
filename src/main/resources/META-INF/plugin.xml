@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+  <id>teeschke.geocode</id>
+  <name>Geocode Plugin</name>
+  <version>0.0.1</version>
+  <vendor email="daniel.teske@gmail.com" url="git ">dummy</vendor>
+
+  <description><![CDATA[
+      geocode plugin.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Release 0.0.1: Initial release.<br>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="131"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+
+    <group id="TeeschkeGeocodeMenu" text="Geocode" popup="true">
+      <add-to-group group-id="RefactoringMenu" anchor="first"/>
+    </group>
+
+    <action id="teeschke.geocode.text2lonlat" class="org.teeschke.intellij.geocode.plugin.TextToLonLat" text="text to lon,lat"
+            description="converts selected text to lon,lat">
+      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+    </action>
+
+    <action id="teeschke.geocode.lonlat2text" class="org.teeschke.intellij.geocode.plugin.LonLatToText" text="lon,lat to text"
+            description="converts selected lon,lat to text">
+      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt G"/>
+    </action>
+
+
+  </actions>
+
+</idea-plugin>

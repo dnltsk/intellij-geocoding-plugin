@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.0.20"
+}
+
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+intellij {
+    version '2016.2.5' //IntelliJ IDEA dependency
+    plugins 'coverage' //Bundled plugin dependencies
+    pluginName 'teeschke.geocode'
+}
+
+group 'org.jetbrains'
+version '1.2' // Plugin version
+
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+    compile group: 'org.codehaus.jackson', name: 'jackson-jaxrs', version: '1.9.4'
+}
