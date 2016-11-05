@@ -2,14 +2,28 @@
   <id>teeschke.geocode</id>
   <name>Geocode Plugin</name>
   <version>0.0.1</version>
-  <vendor email="daniel.teske@gmail.com" url="git ">dummy</vendor>
+  <vendor email="daniel.teske@gmail.com" url="https://github.com/teeschke/intellij-geocoding-plugin">teeschke</vendor>
 
   <description><![CDATA[
-      geocode plugin.<br>
+      This plugin is made for engineers who have to work with spatial data.<br/>
+      You can replaces address names with its coordinates (Geocoding) and vice versa (Reverse Geocoding).<br/>
+      It makes it easy to generate test data or resolve coordinates to its addresses within your IntelliJ Editor.<br/>
+      <br/>
+      After you installed it you have a new action group <b>Geocoding</b> inside your <b>Refactoring</b> context menu.<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/context-menu.png" title="Geocoding Context Menu"/>
+      <h3>Shortcuts</h3>
+      <br/>
+      <b>Alt</b> + <b>Cmd</b> + <b>G</b> for geocoding<br/>
+      <b>Shift</b> + <b>Alt</b> + <b>Cmd</b> + <b>G</b> for reverse geocoding<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/geocoding.gif" title="Geocoding Context Menu"/>
     ]]></description>
 
   <change-notes><![CDATA[
-      Release 0.0.1: Initial release.<br>
+      <ul>
+        <li>
+          1.0.0-RELEASE: Initial release.<br>
+        </li>
+      </ul>
     ]]>
   </change-notes>
 
