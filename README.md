@@ -5,6 +5,8 @@ It makes it easy to generate test data or resolve coordinates to its location na
 
 After installing it you have a new action _Refactoring_ group called _Geocoding_
 
+![Geocoding Context Menu](src/main/resources/context-menu.png)
+
 Shortcuts:
 
 * `Alt + Cmd + G` for geocoding

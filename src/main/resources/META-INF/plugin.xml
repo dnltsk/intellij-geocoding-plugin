@@ -30,18 +30,17 @@
       <add-to-group group-id="RefactoringMenu" anchor="first"/>
     </group>
 
-    <action id="teeschke.geocode.text2lonlat" class="org.teeschke.intellij.geocode.plugin.TextToLonLat" text="text to lon,lat"
-            description="converts selected text to lon,lat">
-      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
-    </action>
-
     <action id="teeschke.geocode.lonlat2text" class="org.teeschke.intellij.geocode.plugin.LonLatToText" text="lon,lat to text"
             description="converts selected lon,lat to text">
       <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
       <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt G"/>
     </action>
 
+    <action id="teeschke.geocode.text2lonlat" class="org.teeschke.intellij.geocode.plugin.TextToLonLat" text="text to lon,lat"
+            description="converts selected text to lon,lat">
+      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+    </action>
 
   </actions>
 
