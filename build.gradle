@@ -26,5 +26,5 @@ repositories {
 }
 
 dependencies{
-    compile group: 'org.codehaus.jackson', name: 'jackson-jaxrs', version: '1.9.4'
+    compile group: 'org.codehaus.jackson', name: 'jackson-jaxrs', version: '1.9.13'
 }
