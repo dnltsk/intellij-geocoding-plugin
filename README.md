@@ -4,7 +4,7 @@ This Plugin is made for engineers who have to work with spatial data.
 You can replaces address names with its coordinates (Geocoding) and vice versa (Reverse Geocoding).
 It enables you to generate test data quickly or resolve coordinates to its addresses within your IntelliJ Editor.
 
-After you installed it you have a new action group **Geocoding** inside your **Refactoring** context menu.
+After you installed it you have a new action group **Geocode** inside your **Refactoring** context menu.
 
 ![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)
 

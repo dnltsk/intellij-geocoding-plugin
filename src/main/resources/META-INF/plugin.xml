@@ -9,7 +9,7 @@
       You can replaces address names with its coordinates (Geocoding) and vice versa (Reverse Geocoding).
       It enables you to generate test data quickly or resolve coordinates to its addresses within your IntelliJ Editor.<br/>
       <br/>
-      After you installed the Plugin you have a new action group <b>Geocoding</b> inside your <b>Refactoring</b> context menu.<br/>
+      After you installed the Plugin you have a new action group <b>Geocode</b> inside your <b>Refactoring</b> context menu.<br/>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/context-menu.png" title="Geocoding Context Menu"/>
       <h3>Shortcuts</h3>
       <br/>
