@@ -21,7 +21,7 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 
 ### Reverse Geocoding Demo
 
-![Geocoding Sample](src/main/resources/META-INF/revers-geocoding.gif)
+![Geocoding Sample](src/main/resources/META-INF/reverse-geocoding.gif)
 
 ## Install Plugin into your IntelliJ
 
