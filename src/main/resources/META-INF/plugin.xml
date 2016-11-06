@@ -11,25 +11,24 @@
       <br/>
       After you installed the Plugin you have a new action group <b>Geocode</b> inside your <b>Refactoring</b> context menu.<br/>
 
-      <h3>Shortcuts</h3>
-      <br/>
+      <h2>Shortcuts</h2>
       <b>Alt</b> + <b>Cmd</b> + <b>G</b> for geocoding<br/>
       <b>Shift</b> + <b>Alt</b> + <b>Cmd</b> + <b>G</b> for reverse geocoding<br/>
 
-      <h3>Geocode Context Menu</h3>
+      <h2>Geocode Context Menu</h2>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/context-menu.png" title="Geocode Context Menu"/>
 
-      <h3>Create Sample Data Demo</h3>
+      <h2>Create Sample Data Demo</h2>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/geocoding.gif" title="Create Sample Data Demo"/>
 
-      <h3>Reverse Geocoding Demo</h3>
+      <h2>Reverse Geocoding Demo</h2>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/reverse-geocoding.gif" title="Reverse Geocoding Demo"/>
     ]]></description>
 
   <change-notes><![CDATA[
       <ul>
         <li>
-          1.0.0-RELEASE: Initial release.<br>
+          1.0: Initial release
         </li>
       </ul>
     ]]>
