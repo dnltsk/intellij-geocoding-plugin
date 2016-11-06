@@ -1,5 +1,7 @@
 # IntelliJ Geocoding Plugin
 
+https://plugins.jetbrains.com/plugin/9235
+
 This Plugin is made for engineers who have to work with spatial data. 
 Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding).
 It enables you to generate test data quickly and resolve coordinates to its addresses within your IntelliJ Editor.
