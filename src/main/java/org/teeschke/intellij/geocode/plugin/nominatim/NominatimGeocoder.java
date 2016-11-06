@@ -1,20 +1,21 @@
 package org.teeschke.intellij.geocode.plugin.nominatim;
 
+import org.codehaus.jackson.map.ObjectMapper;
+import org.teeschke.intellij.geocode.plugin.LonLat;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.jetbrains.annotations.NotNull;
 
 public class NominatimGeocoder {
 
+    private static final Logger LOG = Logger.getLogger(NominatimGeocoder.class.toString());
+
     private static final String NOMINATIM_BASE_URL = "http://nominatim.openstreetmap.org/search?";
     private static final String NOMINATIM_DEFAULT_QUERY_STRING = "&format=json&limit=1&polygon=0&addressdetails=0&email=intellij-geocode-plugin@gmail.com";
-
-    private static final Logger LOG = Logger.getLogger(NominatimGeocoder.class.toString());
 
     public LonLat addressToLonLat(String addressQuery) {
         if (addressQuery == null || addressQuery.length() == 0 ) {

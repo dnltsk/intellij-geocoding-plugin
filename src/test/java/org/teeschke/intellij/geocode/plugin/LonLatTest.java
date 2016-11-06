@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin.nominatim;
+package org.teeschke.intellij.geocode.plugin;
 
 import org.junit.Test;
 

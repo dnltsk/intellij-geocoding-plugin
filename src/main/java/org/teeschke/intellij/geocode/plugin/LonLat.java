@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin.nominatim;
+package org.teeschke.intellij.geocode.plugin;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 

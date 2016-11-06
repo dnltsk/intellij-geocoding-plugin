@@ -1,15 +1,15 @@
 package org.teeschke.intellij.geocode.plugin;
 
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
-import org.teeschke.intellij.geocode.plugin.nominatim.LonLat;
 import org.teeschke.intellij.geocode.plugin.nominatim.NominatimGeocoder;
 
-public class TextToLonLat extends AbstractGeocodeAction {
+public class TextToLonLatAction extends AbstractGeocodeAction {
 
     @Override
     public void actionPerformed(AnActionEvent actionEvent) {
