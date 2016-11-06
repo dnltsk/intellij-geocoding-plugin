@@ -1,43 +1,63 @@
 # IntelliJ Geocoding Plugin
 
 This Plugin is made for engineers who have to work with spatial data. 
-You can replaces address names with its coordinates (Geocoding) and vice versa (Reverse Geocoding).
-It enables you to generate test data quickly or resolve coordinates to its addresses within your IntelliJ Editor.
+Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding).
+It enables you to generate test data quickly and resolve coordinates to its addresses within your IntelliJ Editor.
 
 After you installed it you have a new action group **Geocode** inside your **Refactoring** context menu.
 
-![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)
+### Geocode Shortcuts
 
-Shortcuts:
+* `⌥⌘G` for geocoding
+* `⇧⌥⌘G` for reverse geocoding
 
-* `Alt + Cmd + G` for geocoding
-* `Shift + Alt + Cmd + G` for reverse geocoding
- 
+### Geocode Context Menu
+
+[![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)](src/main/resources/META-INF/context-menu-large.png)
+
+### Create Sample Data Demo
+
 ![Geocoding Sample](src/main/resources/META-INF/geocoding.gif)
 
-## Install
+### Reverse Geocoding Demo
+
+![Geocoding Sample](src/main/resources/META-INF/revers-geocoding.gif)
+
+## Install Plugin into your IntelliJ
 
 ### via IntelliJ Plugin Repository
 
-1. go to _Preferences_ (⌘,)
-2. in _Plugins_ search for "Geocoding"
+1. in your IntelliJ go to _Preferences_ `⌘,`
+2. in _Plugins_ search for "Geocoding Plugin"
 3. select _Search in repositories_
 4. there you should find the _Geocoding Plugin_
 5. restart IntelliJ
 
 ### via JAR file
 
-1. clone
+1. clone this Repo
 2. `gradle test buildPlugin`
-3. go to _Preferences_ (⌘,) 
+3. in your IntelliJ go to _Preferences_ `⌘,` 
 4. in _Plugins_ click on _Install plugin from disk_ 
 5. select the generated jar file under _build/distributions/_
 6. restart IntelliJ
 
 ## Run from scratch
 
-1. clone
+1. clone this Repo
+2. modify code (optional :smirk:) 
 2. `gradle test runIdea`
+
+## Troubleshooting
+
+If the shortcuts `⌥⌘G` or `⇧⌥⌘G` don't work in your IntelliJ, they might overlap with other plugins. 
+This is how you can fix this issue: 
+
+1. go to _Preferences_ `⌘,`
+2. select _Keymap_
+3. select the _Find Actions by Shortcut_ icon in the upper-right corner and fire the shortcut
+4. modify the overlapping shortcuts to your personal solution
+
 
 ## Worth a read about IntelliJ Plugin Development
 
