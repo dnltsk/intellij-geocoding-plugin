@@ -1,39 +1,37 @@
 <idea-plugin version="2">
   <id>teeschke.geocode</id>
   <name>Geocoding Plugin</name>
-  <version>1.1</version>
+  <version>1.4</version>
   <vendor email="daniel.teske@gmail.com" url="https://github.com/teeschke/intellij-geocoding-plugin">teeschke</vendor>
 
   <description><![CDATA[
-      This Plugin is made for engineers who have to work with spatial data.
-      Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding).
-      It enables you to generate test data quickly or resolve coordinates to its addresses within your IntelliJ Editor.<br/>
+      This Plugin is made for engineers working with Location-Based-Services / -Applications. Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding). It enables you to create test-locations quickly or resolve coordinates to its addresses within your IntelliJ Editor.<br/>
       <br/>
       After you installed the Plugin you have a new action group <b>Geocode</b> inside your <b>Refactoring</b> context menu.<br/>
-
-      <h2>Shortcuts</h2>
-
+      <br/>
+      Shortcuts<br/>
+      =========<br/>
       <b>Alt</b> + <b>Cmd</b> + <b>G</b> for geocoding<br/>
-      <b>Shift</b> + <b>Alt</b> + <b>Cmd</b> + <b>G</b> for reverse geocoding
-
-      <h2>Geocode Context Menu</h2>
-
-      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/context-menu.png" title="Geocode Context Menu"/>
-
-      <h2>Create Sample Data Demo</h2>
-
-      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/geocoding.gif" title="Create Sample Data Demo"/>
-
-      <h2>Reverse Geocoding Demo</h2>
-
-      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/reverse-geocoding.gif" title="Reverse Geocoding Demo"/>
-
+      <b>Shift</b> + <b>Alt</b> + <b>Cmd</b> + <b>G</b> for reverse geocoding<br/>
+      <br/>
+      Geocode Context Menu<br/>
+      ===================<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/context-menu.png" title="Geocode Context Menu"/><br/>
+      <br/>
+      Create Sample Data Demo<br/>
+      =====================<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/geocoding.gif" title="Create Sample Data Demo"/><br/>
+      <br/>
+      Reverse Geocoding Demo<br/>
+      =====================<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/reverse-geocoding.gif" title="Reverse Geocoding Demo"/><br/>
+      <br/>
     ]]></description>
 
   <change-notes><![CDATA[
       <ul>
         <li>
-          1.3: name fixed to "Geocoding Plugin"
+          <= 1.4: layout changes of description text
         </li>
         <li>
           1.0: Initial release
