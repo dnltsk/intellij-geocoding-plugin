@@ -58,6 +58,10 @@ This is how you can fix this issue:
 3. select the _Find Actions by Shortcut_ icon in the upper-right corner and fire the shortcut
 4. modify the overlapping shortcuts to your personal solution
 
+## License
+
+* Source Code [Apache 2.0](LICENSE)
+* Geocoded data is provided under the [ODbL](http://opendatacommons.org/licenses/odbl/) via Nominatim / OpenStreetMap®
 
 ## Worth a read about IntelliJ Plugin Development
 

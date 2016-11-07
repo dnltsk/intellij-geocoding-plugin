@@ -26,6 +26,11 @@
       =====================<br/>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/reverse-geocoding.gif" title="Reverse Geocoding Demo"/><br/>
       <br/>
+      License<br/>
+      =======<br/>
+      Source Code Apache 2.0<br/>
+      Geocoded data is provided under the ODbL via Nominatim / OpenStreetMap®<br/>
+      <br/>
     ]]></description>
 
   <change-notes><![CDATA[
