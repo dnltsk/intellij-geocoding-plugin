@@ -1,7 +1,5 @@
 # IntelliJ Geocoding Plugin
 
-https://plugins.jetbrains.com/plugin/9235
-
 This Plugin is made for engineers working with Location-Based-Services / -Applications 
 Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding).
 It enables you to create test-locations quickly and resolve coordinates to its addresses within your IntelliJ Editor.
@@ -27,7 +25,7 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 
 ## Install Plugin into your IntelliJ
 
-### via IntelliJ Plugin Repository
+### via IntelliJ Plugin Repository (WORK IN PROGRESS!)
 
 1. in your IntelliJ go to _Preferences_ `⌘,`
 2. in _Plugins_ search for "Geocoding Plugin"
