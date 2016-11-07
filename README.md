@@ -2,9 +2,9 @@
 
 https://plugins.jetbrains.com/plugin/9235
 
-This Plugin is made for engineers who have to work with spatial data. 
+This Plugin is made for engineers working with Location-Based-Services / -Applications 
 Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding).
-It enables you to generate test data quickly and resolve coordinates to its addresses within your IntelliJ Editor.
+It enables you to create test-locations quickly and resolve coordinates to its addresses within your IntelliJ Editor.
 
 After you installed it you have a new action group **Geocode** inside your **Refactoring** context menu.
 
