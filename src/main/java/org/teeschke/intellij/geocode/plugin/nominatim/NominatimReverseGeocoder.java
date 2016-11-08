@@ -27,7 +27,7 @@ public class NominatimReverseGeocoder {
     private static final String NOMINATIM_ACCEPT_LANGUAGE_ENGLISH = "en";
     private static final String NOMINATIM_ACCEPT_LANGUAGE_GERMAN = "de";
 
-    private static final String NOMINATIM_EMAIL = "intellij-geocode-plugin@gmail.com";
+    private static final String NOMINATIM_EMAIL = "intellij.geocoding.plugin@gmail.com";
 
     private static final String NOMINATIM_BASE_URL = "http://nominatim.openstreetmap.org/reverse?";
     private static final String NOMINATIM_DEFAULT_QUERY_STRING = "&format=json"

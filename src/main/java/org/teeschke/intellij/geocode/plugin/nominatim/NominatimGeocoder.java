@@ -15,7 +15,7 @@ public class NominatimGeocoder {
     private static final Logger LOG = Logger.getLogger(NominatimGeocoder.class.toString());
 
     private static final String NOMINATIM_BASE_URL = "http://nominatim.openstreetmap.org/search?";
-    private static final String NOMINATIM_DEFAULT_QUERY_STRING = "&format=json&limit=1&polygon=0&addressdetails=0&email=intellij-geocode-plugin@gmail.com";
+    private static final String NOMINATIM_DEFAULT_QUERY_STRING = "&format=json&limit=1&polygon=0&addressdetails=0&email=intellij.geocoding.plugin@gmail.com";
 
     public LonLat addressToLonLat(String addressQuery) {
         if (addressQuery == null || addressQuery.length() == 0 ) {
