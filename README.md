@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/teeschke/intellij-geocoding-plugin.svg?branch=master)](https://travis-ci.org/teeschke/intellij-geocoding-plugin/) [![codebeat badge](https://codebeat.co/badges/ba834d38-32eb-4ab2-b396-10e36765f492)](https://codebeat.co/projects/github-com-teeschke-intellij-geocoding-plugin) [![codecov](https://codecov.io/gh/teeschke/intellij-geocoding-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/teeschke/intellij-geocoding-plugin)
+
 # IntelliJ Geocoding Plugin
 
 https://plugins.jetbrains.com/plugin/9235
