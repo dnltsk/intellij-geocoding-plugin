@@ -7,9 +7,6 @@ cache:
   directories:
     - $HOME/.m2
 
-test:
-    post:
-        - gradle jacocoTestReport
-
 after_success:
+    - gradle jacocoTestReport
     - bash <(curl -s https://codecov.io/bash) -t 06a3e6e8-ddf4-4950-b2e0-2a3483c3716c
