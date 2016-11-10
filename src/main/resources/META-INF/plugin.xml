@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>teeschke.geocode</id>
   <name>Geocoding Plugin</name>
-  <version>1.5</version>
+  <version>1.0.0</version>
   <vendor email="daniel.teske@gmail.com" url="https://github.com/teeschke/intellij-geocoding-plugin">teeschke</vendor>
 
   <description><![CDATA[
