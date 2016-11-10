@@ -11,6 +11,7 @@ plugins {
 apply plugin: 'idea'
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 intellij {
     version '2016.2.5'
