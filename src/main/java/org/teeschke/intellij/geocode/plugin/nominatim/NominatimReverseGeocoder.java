@@ -1,6 +1,8 @@
 package org.teeschke.intellij.geocode.plugin.nominatim;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.teeschke.intellij.geocode.plugin.Address;
 import org.teeschke.intellij.geocode.plugin.LonLat;
 import org.teeschke.intellij.geocode.plugin.LonLatValidator;
@@ -8,12 +10,10 @@ import org.teeschke.intellij.geocode.plugin.LonLatValidator;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class NominatimReverseGeocoder {
 
-    private static final Logger LOG = Logger.getLogger(NominatimReverseGeocoder.class.toString());
+    private static final Logger LOG = LoggerFactory.getLogger(NominatimReverseGeocoder.class);
 
     private static final int COUNTRY_LEVEL = 2;
     private static final int STATE_LEVEL = 4;
@@ -41,14 +41,14 @@ public class NominatimReverseGeocoder {
 
     public Address lonLatToAddress(LonLat lonLat) {
         if(!lonLatValidator.validate(lonLat)){
-            LOG.warning("invalid LonLat: "+lonLat.toString());
+            LOG.debug("invalid LonLat: "+lonLat.toString());
             return null;
         }
         try {
             URL geocodeRequestUrl = createReverseGeocodeRequestUrl(lonLat);
             return fetchAddress(geocodeRequestUrl);
-        } catch (IOException ex) {
-            LOG.log(Level.INFO, ex.getLocalizedMessage(), ex);
+        } catch (IOException e) {
+            LOG.error("error during lonLatToAddress with >" + lonLat + "<: " + e.getLocalizedMessage(), e);
             return null;
         }
     }

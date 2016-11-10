@@ -5,11 +5,15 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by danielt on 05.11.16.
  */
 abstract public class AbstractGeocodeAction extends AnAction {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AbstractGeocodeAction.class);
 
     abstract public void actionPerformed(AnActionEvent e);
 
@@ -20,10 +24,14 @@ abstract public class AbstractGeocodeAction extends AnAction {
     }
 
     protected void determineVisibility(AnActionEvent actionEvent) {
-        final Editor editor = actionEvent.getRequiredData(CommonDataKeys.EDITOR);
-        final SelectionModel selectionModel = editor.getSelectionModel();
-        boolean isTextSelected = isTextSelected(selectionModel.getSelectedText());
-        actionEvent.getPresentation().setEnabled(isTextSelected);
+        try {
+            final Editor editor = actionEvent.getRequiredData(CommonDataKeys.EDITOR);
+            final SelectionModel selectionModel = editor.getSelectionModel();
+            boolean isTextSelected = isTextSelected(selectionModel.getSelectedText());
+            actionEvent.getPresentation().setEnabled(isTextSelected);
+        } catch (Exception e) {
+            LOG.error("Something went wrong during determineVisibility(): " + e.getLocalizedMessage(), e);
+        }
     }
 
     protected boolean isTextSelected(String selectedText) {
