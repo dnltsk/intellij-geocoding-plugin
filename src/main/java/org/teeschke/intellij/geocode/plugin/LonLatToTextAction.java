@@ -11,41 +11,39 @@ import org.teeschke.intellij.geocode.plugin.nominatim.NominatimReverseGeocoder;
 
 public class LonLatToTextAction extends AbstractGeocodeAction {
 
-    private final LonLatParser lonLatParser = new LonLatParser();
+    private static final LonLatParser lonLatParser = new LonLatParser();
+    private static final NominatimReverseGeocoder nominatimReverseGeocoder = new NominatimReverseGeocoder();
 
     @Override
     public void actionPerformed(AnActionEvent actionEvent) {
-        final Editor editor = actionEvent.getRequiredData(CommonDataKeys.EDITOR);
-        final Project project = actionEvent.getRequiredData(CommonDataKeys.PROJECT);
-
-        final Document document = editor.getDocument();
-        final SelectionModel selectionModel = editor.getSelectionModel();
-
-        if(!isTextSelected(selectionModel.getSelectedText())){
+        final Editor editor = getCurrentEditor(actionEvent);
+        if (!hasEditorSelectedText(editor)) {
             return;
         }
 
-        String selectedText = selectionModel.getSelectedText();
+        final Document document = editor.getDocument();
+        final SelectionModel selectionModel = editor.getSelectionModel();
+        final String selectedText = selectionModel.getSelectedText();
         final int start = selectionModel.getSelectionStart();
         final int end = selectionModel.getSelectionEnd();
 
         final LonLat selectedLonLat = lonLatParser.parseLonLat(selectedText);
-        if(selectedLonLat == null){
-            return;
-        }
-
-        final Address address = new NominatimReverseGeocoder().lonLatToAddress(selectedLonLat);
-        if(address == null || address.toString() == null) {
+        if (selectedLonLat == null) {
             return;
         }
 
         Runnable replacementProcess = new Runnable() {
             @Override
             public void run() {
+                final Address address = nominatimReverseGeocoder.lonLatToAddress(selectedLonLat);
+                if (address == null || address.toString() == null) {
+                    return;
+                }
                 document.replaceString(start, end, address.toString());
             }
         };
 
+        final Project project = actionEvent.getRequiredData(CommonDataKeys.PROJECT);
         WriteCommandAction.runWriteCommandAction(project, replacementProcess);
         selectionModel.removeSelection();
     }
