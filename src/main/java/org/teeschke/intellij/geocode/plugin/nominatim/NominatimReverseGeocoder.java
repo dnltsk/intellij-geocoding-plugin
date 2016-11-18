@@ -31,17 +31,17 @@ public class NominatimReverseGeocoder {
 
     private static final String NOMINATIM_BASE_URL = "http://nominatim.openstreetmap.org/reverse?";
     private static final String NOMINATIM_DEFAULT_QUERY_STRING = "&format=json"
-            +"&limit=1"
-            +"&addressdetails=0"
-            +"&accept-language="+NOMINATIM_ACCEPT_LANGUAGE_ENGLISH
-            +"&zoom="+SUB_URBAN_LEVEL
-            +"&email="+NOMINATIM_EMAIL;
+            + "&limit=1"
+            + "&addressdetails=0"
+            + "&accept-language=" + NOMINATIM_ACCEPT_LANGUAGE_ENGLISH
+            + "&zoom=" + SUB_URBAN_LEVEL
+            + "&email=" + NOMINATIM_EMAIL;
 
     private static final LonLatValidator lonLatValidator = new LonLatValidator();
 
     public Address lonLatToAddress(LonLat lonLat) {
-        if(!lonLatValidator.validate(lonLat)){
-            LOG.debug("invalid LonLat: "+lonLat.toString());
+        if (!lonLatValidator.validate(lonLat)) {
+            LOG.debug("invalid LonLat: " + lonLat.toString());
             return null;
         }
         try {
@@ -60,8 +60,8 @@ public class NominatimReverseGeocoder {
         return new URL(reverseGeocodeRequestUrl);
     }
 
-    private Address fetchAddress(URL reverseGeocodeUrl) throws IOException{
-        try(InputStream is = reverseGeocodeUrl.openStream()){
+    private Address fetchAddress(URL reverseGeocodeUrl) throws IOException {
+        try (InputStream is = reverseGeocodeUrl.openStream()) {
             return new ObjectMapper().readValue(is, Address.class);
         }
     }

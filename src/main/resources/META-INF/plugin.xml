@@ -1,85 +1,95 @@
 <idea-plugin version="2">
-  <id>teeschke.geocode</id>
-  <name>Geocoding Plugin</name>
-  <version>1.0.1</version>
-  <vendor email="daniel.teske@gmail.com" url="https://github.com/teeschke/intellij-geocoding-plugin">teeschke</vendor>
+    <id>teeschke.geocode</id>
+    <name>Geocoding Plugin</name>
+    <version>1.1.0</version>
+    <vendor email="daniel.teske@gmail.com" url="https://github.com/teeschke/intellij-geocoding-plugin">teeschke</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       This Plugin is made for engineers working with Location-Based-Services / -Applications. Thus you can replace address names by its coordinates (Geocoding) and vice versa (Reverse Geocoding). It enables you to create test-locations quickly or resolve coordinates to its addresses within your IntelliJ Editor.<br/>
       <br/>
       After you installed the Plugin you have a new action group <b>Geocode</b> inside your <b>Refactoring</b> context menu.<br/>
       <br/>
-      Shortcuts<br/>
+      <b>Shortcuts</b><br/>
       =========<br/>
       <b>Alt</b> + <b>Cmd</b> + <b>G</b> for geocoding<br/>
       <b>Shift</b> + <b>Alt</b> + <b>Cmd</b> + <b>G</b> for reverse geocoding<br/>
       <br/>
-      Geocode Context Menu<br/>
+      <b>Geocoding Context Menu</b><br/>
       ===================<br/>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/context-menu.png" title="Geocode Context Menu"/><br/>
       <br/>
-      Create Sample Data Demo<br/>
+      <b>Create Sample Data Demo</b><br/>
       =====================<br/>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/geocoding.gif" title="Create Sample Data Demo"/><br/>
       <br/>
-      Reverse Geocoding Demo<br/>
+      <b>Reverse Geocoding Demo</b><br/>
       =====================<br/>
       <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/reverse-geocoding.gif" title="Reverse Geocoding Demo"/><br/>
       <br/>
+      <b>Geocoding Plugin Preferences</b><br/>
+      =========================<br/>
+      <img src="https://github.com/teeschke/intellij-geocoding-plugin/raw/master/src/main/resources/META-INF/preferences.png" title="Geocode Context Menu"/><br/>
+      <br/>
       License<br/>
       =======<br/>
-      Source Code Apache 2.0<br/>
+      Source Code under Apache 2.0<br/>
       Geocoded data is provided under the ODbL via Nominatim / OpenStreetMap®<br/>
       <br/>
     ]]></description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
       <ul>
         <li>
-          <= 1.4: layout changes of description text
+          1.1: settings dialog to switch between lon,lat and lat,lon
         </li>
         <li>
           1.0: Initial release
         </li>
       </ul>
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <idea-version since-build="131"/>
+    <idea-version since-build="131"/>
 
-  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products-->
-  <depends>com.intellij.modules.lang</depends>
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products-->
+    <depends>com.intellij.modules.lang</depends>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="org.teeschke.intellij.geocode.plugin.config.GeocodingConfig"
+                            serviceInterface="org.teeschke.intellij.geocode.plugin.config.GeocodingConfig"/>
+        <applicationConfigurable groupId="tools" displayName="Geocoding Plugin"
+                                 id="org.teeschke.intellij.geocode.plugin.config.GeocodingConfigurable"
+                                 instance="org.teeschke.intellij.geocode.plugin.config.GeocodingConfigurable"/>
+    </extensions>
 
-  <extensions defaultExtensionNs="com.intellij">
-  </extensions>
+    <application-components>
+    </application-components>
 
-  <application-components>
-  </application-components>
+    <project-components>
+    </project-components>
 
-  <project-components>
-  </project-components>
+    <actions>
 
-  <actions>
+        <group id="TeeschkeGeocodeMenu" text="Geocode" popup="true">
+            <add-to-group group-id="RefactoringMenu" anchor="first"/>
+        </group>
 
-    <group id="TeeschkeGeocodeMenu" text="Geocode" popup="true">
-      <add-to-group group-id="RefactoringMenu" anchor="first"/>
-    </group>
+        <action id="teeschke.geocode.lonlat2text" class="org.teeschke.intellij.geocode.plugin.LonLatToTextAction"
+                text="lon,lat to text (reverse geocode)"
+                description="converts selected lon,lat to address">
+            <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt G"/>
+        </action>
 
-    <action id="teeschke.geocode.lonlat2text" class="org.teeschke.intellij.geocode.plugin.LonLatToTextAction" text="lon,lat to text (reverse geocode)"
-            description="converts selected lon,lat to address">
-      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt G"/>
-    </action>
+        <action id="teeschke.geocode.text2lonlat" class="org.teeschke.intellij.geocode.plugin.TextToLonLatAction"
+                text="text to lon,lat (geocode)"
+                description="converts selected address to lon,lat">
+            <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
+        </action>
 
-    <action id="teeschke.geocode.text2lonlat" class="org.teeschke.intellij.geocode.plugin.TextToLonLatAction" text="text to lon,lat (geocode)"
-            description="converts selected address to lon,lat">
-      <add-to-group group-id="TeeschkeGeocodeMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
-    </action>
-
-  </actions>
+    </actions>
 
 </idea-plugin>

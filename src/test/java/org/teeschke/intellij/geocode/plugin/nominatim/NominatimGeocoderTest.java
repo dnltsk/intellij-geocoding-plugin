@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotNull;
 public class NominatimGeocoderTest {
 
     @Test
-    public void Beijing_can_be_geocoded(){
+    public void Beijing_can_be_geocoded() {
         LonLat beijing = new NominatimGeocoder().addressToLonLat("Beijing");
         assertNotNull(beijing);
     }

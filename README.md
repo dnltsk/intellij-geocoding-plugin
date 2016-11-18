@@ -10,12 +10,12 @@ It enables you to create test-locations quickly and resolve coordinates to its a
 
 After you installed it you have a new action group **Geocode** inside your **Refactoring** context menu.
 
-### Geocode Shortcuts
+### Geocoding Shortcuts
 
 * `⌥⌘G` for geocoding
 * `⇧⌥⌘G` for reverse geocoding
 
-### Geocode Context Menu
+### Geocoding Context Menu
 
 [![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)](src/main/resources/META-INF/context-menu-large.png)
 
@@ -26,6 +26,10 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 ### Reverse Geocoding Demo
 
 ![Geocoding Sample](src/main/resources/META-INF/reverse-geocoding.gif)
+
+### Geocoding Plugin Preferences
+
+[![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)](src/main/resources/META-INF/preferences.png)
 
 ## Install Plugin into your IntelliJ
 

@@ -10,12 +10,12 @@ public class LonLatValidatorTest {
     private static LonLatValidator lonLatValidator;
 
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         lonLatValidator = new LonLatValidator();
     }
 
     @Test
-    public void lon_lat_inside_range_are_valid(){
+    public void lon_lat_inside_range_are_valid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = 0.0;
         lonlat.lat = 0.0;
@@ -24,7 +24,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void too_far_northwards_is_unvalid(){
+    public void too_far_northwards_is_unvalid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = 0.0;
         lonlat.lat = 90.1;
@@ -33,7 +33,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void too_far_eastwards_is_unvalid(){
+    public void too_far_eastwards_is_unvalid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = 180.1;
         lonlat.lat = 0.0;
@@ -42,7 +42,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void too_far_southwards_is_unvalid(){
+    public void too_far_southwards_is_unvalid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = 0.0;
         lonlat.lat = -90.1;
@@ -51,7 +51,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void too_far_westwards_is_unvalid(){
+    public void too_far_westwards_is_unvalid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = -180.1;
         lonlat.lat = 0.0;
@@ -60,7 +60,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void on_south_west_border_is_valid(){
+    public void on_south_west_border_is_valid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = -180.0;
         lonlat.lat = -90.0;
@@ -69,7 +69,7 @@ public class LonLatValidatorTest {
     }
 
     @Test
-    public void on_north_east_border_is_valid(){
+    public void on_north_east_border_is_valid() {
         LonLat lonlat = new LonLat();
         lonlat.lon = 180.0;
         lonlat.lat = 90.0;

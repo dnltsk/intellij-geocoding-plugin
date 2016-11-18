@@ -10,7 +10,7 @@ public class LonLat {
 
     @Override
     public String toString() {
-        return lon+", "+ lat;
+        return lon + ", " + lat;
     }
 
 }
