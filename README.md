@@ -29,7 +29,7 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 
 ### Geocoding Plugin Preferences
 
-[![Geocoding Context Menu](src/main/resources/META-INF/context-menu.png)](src/main/resources/META-INF/preferences.png)
+[![Geocoding Context Menu](src/main/resources/META-INF/preferences.png)](src/main/resources/META-INF/preferences.png)
 
 ## Install Plugin into your IntelliJ
 
