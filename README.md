@@ -68,7 +68,7 @@ This is how you can fix this issue:
 
 ## License
 
-* Source Code [Apache 2.0](LICENSE)
+* Source Code under [Apache 2.0](LICENSE)
 * Geocoded data is provided under the [ODbL](http://opendatacommons.org/licenses/odbl/) via Nominatim / OpenStreetMap®
 
 ## Worth a read about IntelliJ Plugin Development
