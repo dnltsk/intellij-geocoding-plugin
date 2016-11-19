@@ -40,7 +40,7 @@
     <change-notes><![CDATA[
       <ul>
         <li>
-          1.1: settings dialog to switch between lon,lat and lat,lon
+          1.1: preference dialog to switch between lon,lat and lat,lon
         </li>
         <li>
           1.0: Initial release
