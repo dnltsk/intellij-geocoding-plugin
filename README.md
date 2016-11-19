@@ -53,15 +53,15 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 ## Run from scratch
 
 1. clone this Repo
-2. modify code (optional :smirk:) 
-2. `gradle test runIdea`
+2. adjust code if you want to
+3. `gradle test runIdea`
 
 ## Troubleshooting
 
 If the shortcuts `⌥⌘G` or `⇧⌥⌘G` don't work in your IntelliJ, they might overlap with other plugins. 
 This is how you can fix this issue: 
 
-1. go to _Preferences_ `⌘,`
+1. in your IntelliJ go to _Preferences_ `⌘,`
 2. select _Keymap_
 3. select the _Find Actions by Shortcut_ icon in the upper-right corner and fire the shortcut
 4. modify the overlapping shortcuts to your personal solution
