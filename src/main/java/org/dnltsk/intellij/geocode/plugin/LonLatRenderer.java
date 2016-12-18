@@ -1,7 +1,7 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
-import org.teeschke.intellij.geocode.plugin.config.GeocodingConfigManager;
-import org.teeschke.intellij.geocode.plugin.config.LonLatOrder;
+import org.dnltsk.intellij.geocode.plugin.config.GeocodingConfigManager;
+import org.dnltsk.intellij.geocode.plugin.config.LonLatOrder;
 
 public class LonLatRenderer {
 

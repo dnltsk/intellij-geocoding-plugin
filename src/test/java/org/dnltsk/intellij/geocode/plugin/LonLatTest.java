@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
 import org.junit.Test;
 

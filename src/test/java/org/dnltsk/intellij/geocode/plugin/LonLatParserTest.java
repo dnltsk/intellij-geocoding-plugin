@@ -1,19 +1,11 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
-import com.intellij.openapi.components.ServiceManager;
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.util.NotNullLazyKey;
-import com.intellij.testFramework.ParsingTestCase;
-import com.intellij.testFramework.UsefulTestCase;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.teeschke.intellij.geocode.plugin.config.GeocodingConfig;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 @RunWith(JUnit4.class)

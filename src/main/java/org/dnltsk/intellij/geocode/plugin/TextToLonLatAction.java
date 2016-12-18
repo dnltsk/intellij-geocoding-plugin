@@ -1,9 +1,9 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.SelectionModel;
+import org.dnltsk.intellij.geocode.plugin.nominatim.NominatimGeocoder;
 import org.jetbrains.annotations.NotNull;
-import org.teeschke.intellij.geocode.plugin.nominatim.NominatimGeocoder;
 
 public class TextToLonLatAction extends AbstractGeocodeAction {
 

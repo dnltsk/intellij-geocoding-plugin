@@ -1,11 +1,11 @@
-package org.teeschke.intellij.geocode.plugin.nominatim;
+package org.dnltsk.intellij.geocode.plugin.nominatim;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.dnltsk.intellij.geocode.plugin.Address;
+import org.dnltsk.intellij.geocode.plugin.LonLat;
+import org.dnltsk.intellij.geocode.plugin.LonLatValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.teeschke.intellij.geocode.plugin.Address;
-import org.teeschke.intellij.geocode.plugin.LonLat;
-import org.teeschke.intellij.geocode.plugin.LonLatValidator;
 
 import java.io.IOException;
 import java.io.InputStream;

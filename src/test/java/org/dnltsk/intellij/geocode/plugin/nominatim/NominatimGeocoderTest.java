@@ -1,7 +1,7 @@
-package org.teeschke.intellij.geocode.plugin.nominatim;
+package org.dnltsk.intellij.geocode.plugin.nominatim;
 
+import org.dnltsk.intellij.geocode.plugin.LonLat;
 import org.junit.Test;
-import org.teeschke.intellij.geocode.plugin.LonLat;
 
 import static org.junit.Assert.assertNotNull;
 

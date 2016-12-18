@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

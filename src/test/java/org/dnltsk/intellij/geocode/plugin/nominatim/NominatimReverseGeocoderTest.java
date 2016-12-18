@@ -1,9 +1,9 @@
-package org.teeschke.intellij.geocode.plugin.nominatim;
+package org.dnltsk.intellij.geocode.plugin.nominatim;
 
+import org.dnltsk.intellij.geocode.plugin.Address;
+import org.dnltsk.intellij.geocode.plugin.LonLat;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.teeschke.intellij.geocode.plugin.Address;
-import org.teeschke.intellij.geocode.plugin.LonLat;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;

@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin.config;
+package org.dnltsk.intellij.geocode.plugin.config;
 
 public enum LonLatOrder {
 

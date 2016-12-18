@@ -1,8 +1,8 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.SelectionModel;
-import org.teeschke.intellij.geocode.plugin.nominatim.NominatimReverseGeocoder;
+import org.dnltsk.intellij.geocode.plugin.nominatim.NominatimReverseGeocoder;
 
 public class LonLatToTextAction extends AbstractGeocodeAction {
 

@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin;
+package org.dnltsk.intellij.geocode.plugin;
 
 import com.intellij.lang.Language;
 import com.intellij.openapi.application.PathManager;

@@ -1,4 +1,4 @@
-package org.teeschke.intellij.geocode.plugin.config;
+package org.dnltsk.intellij.geocode.plugin.config;
 
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
