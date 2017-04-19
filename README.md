@@ -33,7 +33,7 @@ After you installed it you have a new action group **Geocode** inside your **Ref
 
 ## Install Plugin into your IntelliJ
 
-### via IntelliJ Plugin Repository (WORK IN PROGRESS!)
+### via IntelliJ Plugin Repository
 
 1. in your IntelliJ go to _Preferences_ `⌘,`
 2. in _Plugins_ search for "Geocoding Plugin"
